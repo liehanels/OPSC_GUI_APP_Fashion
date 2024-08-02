@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/loginMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F0FA"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imgViewLogoLogin"
+        android:layout_width="138dp"
+        android:layout_height="118dp"
+        android:layout_marginTop="50dp"
+        android:contentDescription="Logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/fashion_logo" />
+
+    <TextView
+        android:id="@+id/txtShrineFashionLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Shrine Fashion"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="@+id/imgViewLogoLogin"
+        app:layout_constraintStart_toStartOf="@+id/imgViewLogoLogin"
+        app:layout_constraintTop_toBottomOf="@+id/imgViewLogoLogin" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

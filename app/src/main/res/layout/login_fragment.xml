@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/loginMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F0FA"
+    tools:context=".MainActivity">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/containerLogin"
+        android:name="com.example.app_ui_design.LoginFragment"
+        android:layout_width="406dp"
+        android:layout_height="727dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgViewLogoLogin"
+        android:layout_width="225dp"
+        android:layout_height="196dp"
+        android:layout_marginTop="50dp"
+        android:contentDescription="Logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/fashion_logo" />
+
+    <TextView
+        android:id="@+id/txtShrineFashionLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Shrine Fashion"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="@+id/imgViewLogoLogin"
+        app:layout_constraintStart_toStartOf="@+id/imgViewLogoLogin"
+        app:layout_constraintTop_toBottomOf="@+id/imgViewLogoLogin" />
+
+    <EditText
+        android:id="@+id/txtInputUsernameLogin"
+        android:layout_width="300sp"
+        android:layout_height="70sp"
+        android:layout_marginTop="100dp"
+        android:ems="10"
+        android:hint="Username"
+        android:inputType="text"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@+id/imgViewLogoLogin"
+        app:layout_constraintStart_toStartOf="@+id/imgViewLogoLogin"
+        app:layout_constraintTop_toBottomOf="@+id/txtShrineFashionLogin" />
+
+    <EditText
+        android:id="@+id/txtInputPasswordLogin"
+        android:layout_width="300sp"
+        android:layout_height="70sp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@+id/txtInputUsernameLogin"
+        app:layout_constraintStart_toStartOf="@+id/txtInputUsernameLogin"
+        app:layout_constraintTop_toBottomOf="@+id/txtInputUsernameLogin" />
+
+    <Button
+        android:id="@+id/btnCancelLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="70sp"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="#782004"
+        android:text="Cancel"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/txtInputPasswordLogin"
+        app:layout_constraintTop_toBottomOf="@+id/txtInputPasswordLogin" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="150sp"
+        android:layout_height="70sp"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="#6EC707"
+        android:foregroundTint="#81D91C"
+        android:text="Login"
+        android:textColorLink="#7DD516"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/txtInputPasswordLogin"
+        app:layout_constraintTop_toBottomOf="@+id/txtInputPasswordLogin" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
