@@ -8,15 +8,6 @@
     android:background="#F5F0FA"
     tools:context=".MainActivity">
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/containerLogin"
-        android:name="com.example.app_ui_design.LoginFragment"
-        android:layout_width="406dp"
-        android:layout_height="727dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imgViewLogoLogin"
@@ -67,10 +58,11 @@
 
     <Button
         android:id="@+id/btnCancelLogin"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
         android:layout_width="wrap_content"
         android:layout_height="70sp"
         android:layout_marginTop="50dp"
-        android:backgroundTint="#782004"
+        android:backgroundTint="#00FBFBFB"
         android:text="Cancel"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="@+id/txtInputPasswordLogin"

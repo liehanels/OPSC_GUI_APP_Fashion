@@ -10,17 +10,18 @@ import androidx.fragment.app.Fragment
 class MainActivity : AppCompatActivity(), NavigationHost {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        /*enableEdgeToEdge()
+        enableEdgeToEdge()
         setContentView(R.layout.activity_main)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.loginMain)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
-        }*/
+        }
         if (savedInstanceState == null){
             supportFragmentManager
                 .beginTransaction()
-                .add(R.id.containerLogin, LoginFragment())
+                .replace(R.id.loginMain, LoginFragment())
+                .addToBackStack(null)
                 .commit()
         }
     }
@@ -28,7 +29,7 @@ class MainActivity : AppCompatActivity(), NavigationHost {
     override fun navigateTo(fragment: Fragment, addToBackstack: Boolean) {
         val transaction = supportFragmentManager
             .beginTransaction()
-            .replace(R.id.containerLogin, fragment)
+            .replace(R.id.loginMain, LoginFragment())
         if (addToBackstack){
             transaction.addToBackStack(null)
         }
