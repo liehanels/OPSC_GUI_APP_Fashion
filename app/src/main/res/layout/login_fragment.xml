@@ -82,4 +82,13 @@
         app:layout_constraintEnd_toEndOf="@+id/txtInputPasswordLogin"
         app:layout_constraintTop_toBottomOf="@+id/txtInputPasswordLogin" />
 
+    <Button
+        android:id="@+id/btnBiometric"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Biometric"
+        app:layout_constraintEnd_toEndOf="@+id/btnLogin"
+        app:layout_constraintStart_toStartOf="@+id/btnLogin"
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
