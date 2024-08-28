@@ -2,12 +2,14 @@ package com.example.app_ui_design
 
 import android.os.Bundle
 import android.text.Editable
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 
 class LoginFragment : Fragment() {
     private lateinit var btnLogin: Button
@@ -26,11 +28,13 @@ class LoginFragment : Fragment() {
         txtInputPasswordLogin = view.findViewById(R.id.txtInputPasswordLogin)
 
         btnLogin.setOnClickListener {
+            Log.d("button clicked", "true")
             if (!isPasswordValid(txtInputPasswordLogin.text)) {
                 txtInputPasswordLogin.error = "Error"
             } else {
                 txtInputPasswordLogin.error = null
-                (activity as NavigationHost).navigateTo(ProductGridFragment(), false)
+                Log.d("login success", "success")
+                findNavController().navigate(R.id.ProductGridFragment)
             }
         }
         btnBiometric.setOnClickListener {
